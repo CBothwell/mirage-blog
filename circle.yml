@@ -1,0 +1,19 @@
+machine: 
+  ruby:
+    version: 2.1.1
+dependencies: 
+  pre:
+    - gem install jekyll
+    - sudo apt-get update; sudo apt-get install build-essential m4 ocaml ocaml-native-compilers camlp4-extra opam 
+    - opam switch 4.01.0
+    - eval `opam config env`
+    - opam install mirage 
+    - opam install mirage-seal 
+  post: 
+    - cd _blog; jekyll build
+    - cd ../; mirage-seal --data=htdocs --no-tls --target=xen 
+deployment: 
+    linode:
+      branch: linode 
+      commands: 
+        - bash bin/linode-deploy.sh
