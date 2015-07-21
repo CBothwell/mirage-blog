@@ -1,0 +1,6 @@
+mir-seal
+*.swp
+htdocs/*
+mir-*
+seal.xl
+*.xl
