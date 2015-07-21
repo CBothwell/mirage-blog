@@ -8,7 +8,7 @@ dependencies:
     - sudo apt-get -y update
     - sudo apt-get -y install build-essential m4 ocaml ocaml-native-compilers camlp4-extra opam
     - OPAMYES=true
-    - opam init
+    - opam init -a
     - opam switch 4.01.0
     - eval `opam config env`
     - opam install mirage
