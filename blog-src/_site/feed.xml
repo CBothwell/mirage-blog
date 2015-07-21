@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Set Of Certain Musings</title>
+    <description>A set of musings about coding, computers, and perhaps some other things...
+</description>
+    <link>http://christopherbothwell.com/</link>
+    <atom:link href="http://christopherbothwell.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 03 Dec 2014 14:10:18 -0600</pubDate>
+    <lastBuildDate>Wed, 03 Dec 2014 14:10:18 -0600</lastBuildDate>
+    <generator>Jekyll v2.5.2</generator>
+    
+      <item>
+        <title>Hello World</title>
+        <description>&lt;p&gt;Hello. I see you’ve managed to stumble upon my first post here. Honestly, I just wanted to get something out. &lt;a href=&quot;http://github.com/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt; seems to be a sufficiently complex tool and, like most times I have my first experience. I suppose I expect most folks that due this sort of thing are domain experts, or at least think they are. Suffice to say, I am not. Mostly I just see some bit of new technology or new idea and seek to gorge myself on the documentation, try a few things out, and then just move on…like a buffet. So in the interest of keeping this a correct introduction here is the proverbial hello world. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ocaml&quot; data-lang=&quot;ocaml&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print_endline&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello, world!&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;At any rate, one thing I’ve been looking at recently has been &lt;a href=&quot;http://openmirage.org/&quot;&gt;Mirage&lt;/a&gt; and learning about how to setup a unikernel to run on a Xen instance in the cloud. If you see this, than I was probably successful and I’ll do a follow up post with my experience. Otherwise, it probably won’t matter much what I’ve said here anyway. &lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 03 Dec 2014 07:08:07 -0600</pubDate>
+        <link>http://christopherbothwell.com/jekyll/ocaml/hello/2014/12/03/hello-world.html</link>
+        <guid isPermaLink="true">http://christopherbothwell.com/jekyll/ocaml/hello/2014/12/03/hello-world.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>ocaml</category>
+        
+        <category>hello</category>
+        
+      </item>
+    
+  </channel>
+</rss>
