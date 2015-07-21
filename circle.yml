@@ -6,7 +6,7 @@ dependencies:
     - gem install jekyll
     - sudo add-apt-repository ppa:avsm/ppa
     - sudo apt-get update
-    - sudo apt-get install build-essential m4 ocaml ocaml-native-compilers camlp4-extra
+    - sudo apt-get install build-essential m4 ocaml ocaml-native-compilers camlp4-extra opam
     - OPAMYES=true
     - opam switch 4.01.0
     - eval `opam config env`
