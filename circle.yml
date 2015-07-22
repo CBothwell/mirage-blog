@@ -12,9 +12,8 @@ dependencies:
     - eval `opam config env`
     - opam install -y mirage
     - opam install -y mirage-seal
-  post:
     - cd blog-src && jekyll build
-    - cd ../ && mirage-seal --data=htdocs --no-tls --target=xen
+    - cd ../ && $(opam config var bin)/mirage-seal --data=htdocs --no-tls --target=xen
 deployment:
     linode:
       branch: linode
