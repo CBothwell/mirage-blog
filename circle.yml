@@ -10,10 +10,11 @@ dependencies:
     - opam init -a
     - opam switch 4.01.0
     - eval `opam config env`
+    - PATH=$PATH:$(opam config var bin)
     - opam install -y mirage
     - opam install -y mirage-seal
     - cd blog-src && jekyll build
-    - cd ../ && $(opam config var bin)/mirage-seal --data=htdocs --no-tls --target=xen
+    - cd ../ && mirage-seal --data=htdocs --no-tls --target=xen
 deployment:
     linode:
       branch: linode
