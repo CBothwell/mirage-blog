@@ -8,7 +8,7 @@ dependencies:
     - gem install jekyll
     - sudo add-apt-repository -y ppa:avsm/ppa
     - sudo apt-get -y update
-    - sudo apt-get -y install build-essential m4 ocaml ocaml-native-compilers camlp4-extra opam
+    - sudo apt-get -y install build-essential m4 gcc ocaml ocaml-native-compilers camlp4-extra opam
     - bash bin/build.sh
 deployment:
     linode:
