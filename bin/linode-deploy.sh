@@ -12,7 +12,7 @@ while [[ $(ssh -t $LINODE_USER@$LISH_HOST $LINODE_NAME status) =~ Powered ]]
 done
 
 echo "Generating SSH key...."
-ssh-keygen -q -N ""
+ssh-keygen -f "$HOME/.ssh/id_rsa" -q -N ""
 
 echo "Sending SSH Key and starting SSH."
 expect bin/linode-finnix.expect
