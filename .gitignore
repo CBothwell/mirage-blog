@@ -4,3 +4,4 @@ htdocs/*
 mir-*
 seal.xl
 *.xl
+bin/linode-vars.sh
