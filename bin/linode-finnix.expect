@@ -7,11 +7,13 @@ set fp [open $::env(HOME)/.ssh/id_rsa.pub r]
 set pub_key [read $fp]
 
 spawn ssh -t $username@$host $server
-expect " "
+expect "# "
+send "sed -i 's|#PasswordAuthentication yes|PasswordAuthentication no|' /etc/ssh/sshd_config"
+expect "# "
 send "/etc/init.d/ssh start\n"
 expect "# "
 send "mkdir -p /root/.ssh/\n"
 expect "# "
 send "echo \"$pub_key\" > /root/.ssh/authorized_keys\n"
 expect "# "
-exit 
+exit
