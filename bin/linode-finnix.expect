@@ -8,9 +8,10 @@ set pub_key [read $fp]
 
 spawn ssh -t $username@$host $server
 expect "# "
-sleep 10
+sleep 5
 send "sed -i 's|#PasswordAuthentication yes|PasswordAuthentication no|' /etc/ssh/sshd_config"
 expect "# "
+sleep 5
 send "mkdir -p /root/.ssh/\n"
 expect "# "
 send "echo \"$pub_key\" > /root/.ssh/authorized_keys\n"
