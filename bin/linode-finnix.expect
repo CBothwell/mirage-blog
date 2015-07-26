@@ -12,9 +12,11 @@ sleep 5
 send "sed -i 's|#PasswordAuthentication yes|PasswordAuthentication no|' /etc/ssh/sshd_config\n"
 expect "# "
 sleep 5
-send "mkdir -p /root/.ssh/\n"
+send "mkdir -p /root/.ssh/\n && chmod 700 /root/.ssh/"
 expect "# "
 send "echo \'$pub_key\' > /root/.ssh/authorized_keys\n"
+expect "# "
+send "chown root. /root/.ssh/authorized_keys && chmod 600 /root/.ssh/authorized_keys\n"
 expect "# "
 send "/etc/init.d/ssh start\n"
 expect "# "
