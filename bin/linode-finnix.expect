@@ -14,7 +14,7 @@ expect "# "
 sleep 5
 send "mkdir -p /root/.ssh/\n"
 expect "# "
-send "echo \"$pub_key\" > /root/.ssh/authorized_keys\n"
+send "echo \'$pub_key\' > /root/.ssh/authorized_keys\n"
 expect "# "
 send "/etc/init.d/ssh start\n"
 expect "# "
