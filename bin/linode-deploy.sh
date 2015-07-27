@@ -30,11 +30,4 @@ EOF
 
 echo "Mounting drives...."
 ssh root@$LINODE_IP "mount /dev/xvda /mirage"
-ssh root@$LINODE_IP "mkdir -p /mirage/boot/grub"
-
-echo "Moving kernel to Linode...."
-rsync -avP $PWD/mir-seal.xen root@$LINODE_IP:/mirage/boot/
-rsync -avP $PWD/menu.lst root@$LINODE_IP:/mirage/boot/grub/
-
-echo "Content Moved. Rebooting!"
-ssh -t $LINODE_USER@$LISH_HOST $LINODE_NAME reboot 1
+#ssh -t $LINODE_USER@$LISH_HOST $LINODE_NAME reboot 1
