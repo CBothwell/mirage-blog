@@ -2,7 +2,7 @@
 set username $::env(LINODE_USER)
 set host $::env(LISH_HOST)
 set server $::env(LINODE_NAME)
-set fp [open $::env(HOME)/.ssh/id_rsa.pub r]
+set fp [open $::env(HOME)/.ssh/id_lish-dallas.linode.com.pub r]
 
 set pub_key [read $fp]
 
