@@ -5,12 +5,12 @@ machine:
     version: 2.1.1
 dependencies:
   cache_directories:
-    - $HOME/.opam
+    - .opam
   pre:
     - gem install jekyll
-    - if [[ ! -e $HOME/.opam ]]; then sudo add-apt-repository -y ppa:avsm/ppa; fi
-    - if [[ ! -e $HOME/.opam ]]; then sudo apt-get -y update; fi
-    - if [[ ! -e $HOME/.opam ]]; then sudo apt-get -y install build-essential m4 gcc ocaml ocaml-native-compilers camlp4-extra opam; fi
+    - if [[ ! -e .opam ]]; then sudo add-apt-repository -y ppa:avsm/ppa; fi
+    - if [[ ! -e .opam ]]; then sudo apt-get -y update; fi
+    - if [[ ! -e .opam ]]; then sudo apt-get -y install build-essential m4 gcc ocaml ocaml-native-compilers camlp4-extra opam; fi
     - bash bin/build.sh
 deployment:
     linode:
