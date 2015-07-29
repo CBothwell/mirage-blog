@@ -2,20 +2,17 @@
 
 echo "Shutting down linode instance...."
 ssh -t $LINODE_USER@$LISH_HOST $LINODE_NAME shutdown
-while [[ $(ssh -t $LINODE_USER@$LISH_HOST $LINODE_NAME status) =~ Running ]]
+while [[ $(ssh -t $LINODE_USER@$LISH_HOST $LINODE_NAME status 2>/dev/null) =~ Running ]]
   do sleep 3
 done
 echo "Starting Finnix..."
 ssh -t $LINODE_USER@$LISH_HOST $LINODE_NAME boot 2
-while [[ $(ssh -t $LINODE_USER@$LISH_HOST $LINODE_NAME status) =~ Powered ]]
+while [[ $(ssh -t $LINODE_USER@$LISH_HOST $LINODE_NAME status 2>/dev/null) =~ Powered ]]
   do sleep 3
 done
 
-echo "Generating SSH key...."
-#ssh-keygen -f "$HOME/.ssh/id_rsa" -q -N ""
-
 echo "Sending SSH Key and starting SSH."
-expect bin/linode-finnix.expect
+expect bin/linode-finnix.expect > /dev/null
 
 echo "Generating the menu.lst file"
 # Create the menu.lst file#########################
@@ -27,6 +24,7 @@ root (hd0)
 kernel /boot/mir-seal.xen root=/dev/xvda ro quiet
 EOF
 ##################################################
+cat menu.lst
 
 echo "Mounting drives...."
 ssh root@$LINODE_IP "mkdir -p /mirage"
