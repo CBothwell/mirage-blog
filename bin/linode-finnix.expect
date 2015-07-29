@@ -2,7 +2,7 @@
 set username $::env(LINODE_USER)
 set host $::env(LISH_HOST)
 set server $::env(LINODE_NAME)
-set key_file "id_${LISH_HOST}.pub"
+set key_file "id_${host}.pub"
 set fp [open $::env(HOME)/.ssh/${key_file} r]
 
 set pub_key [read $fp]
