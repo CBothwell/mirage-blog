@@ -1,8 +1,13 @@
 #!/bin/bash
-opam init -a
-opam switch 4.01.0
+if [[ ! -e $HOME/.opam ]]
+  then opam init -a --switch="4.01.0"
+if
 eval `opam config env`
-opam install -y mirage
-opam install -y mirage-seal
+if [[ ! -e $HOME/.opam/4.01.0/lib/mirage ]]
+  then opam install -y mirage
+fi
+if [[ ! -e $HOME/.opam/4.01.0/lib/mirage-seal ]]
+  then opam install -y mirage-seal
+fi
 cd blog-src && jekyll build
 cd ../ && mirage-seal --data=htdocs --no-tls --target=xen
