@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ ! -e $HOME/.opam ]]
-then opam init -a --switch="4.01.0"
+then opam init -a; opam switch "4.01.0"
 fi
 eval `opam config env`
 if [[ ! -e $HOME/.opam/4.01.0/lib/mirage ]]
