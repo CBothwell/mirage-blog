@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Build an EC2 bundle and upload/register it to Amazon.
-wget http://s3.amazonaws.com/ec2-downloads/ec2-ami-tools.zip && unzip ec2-ami-tool.zip 
-PATH=$PATH:/ec2-ami-tools-1.5.7/bin
+wget http://s3.amazonaws.com/ec2-downloads/ec2-ami-tools.zip && unzip ec2-ami-tools.zip 
+PATH=$PATH:$PWD/ec2-ami-tools-1.5.7/bin
+echo $PATH
  
 NAME=mirage
 BUCKET=mirage-deployment
