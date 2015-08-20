@@ -11,9 +11,7 @@ dependencies:
     - if [[ ! -e $HOME/.opam ]]; then sudo add-apt-repository -y ppa:avsm/ppa; fi
     - if [[ ! -e $HOME/.opam ]]; then sudo apt-get -y update; fi
     - if [[ ! -e $HOME/.opam ]]; then sudo apt-get -y install build-essential m4 gcc ocaml ocaml-native-compilers camlp4-extra opam; fi
-    - wget http://s3.amazonaws.com/ec2-downloads/ec2-ami-tools.zip
-    - wget http://www.amazon.com/gp/redirect.html/ref=aws_rc_ec2tools?location=http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip&token=A80325AA4DAB186C80828ED5138633E3F49160D9
-    - bash bin/build.sh
+   - bash bin/build.sh
 deployment:
     linode:
       branch: linode
