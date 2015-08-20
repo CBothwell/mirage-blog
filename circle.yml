@@ -7,11 +7,11 @@ dependencies:
   cache_directories:
     - $HOME/.opam
   pre:
-    - sudo apt-get -y dist-upgrade; sudo apt-get -y update; sudo apt-get install libguestfs-tools
     - gem install jekyll
     - if [[ ! -e $HOME/.opam ]]; then sudo add-apt-repository -y ppa:avsm/ppa; fi
     - if [[ ! -e $HOME/.opam ]]; then sudo apt-get -y update; fi
     - if [[ ! -e $HOME/.opam ]]; then sudo apt-get -y install build-essential m4 gcc ocaml ocaml-native-compilers camlp4-extra opam; fi
+    - sudo apt-get -y install libguestfs0 guestmount
     - bash bin/build.sh
 deployment:
     linode:
