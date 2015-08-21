@@ -179,4 +179,4 @@ let dispatcher segments =
 in
 {% endhighlight %}
 
-There you have it. Now that [about](/about/) works I'll see about getting this blog up on the cloud. 'Til next time. 
+There you have it. Now that [about](/about/) works I'll see about getting this blog up on the cloud. Good luck. 
